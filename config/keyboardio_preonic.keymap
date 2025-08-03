@@ -12,7 +12,7 @@
 
 &lt {
 };
-
+#define PREONIC_ORTHO   1
 / {
     combos {
         compatible = "zmk,combos";
