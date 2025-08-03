@@ -14,6 +14,12 @@
 };
 #define PREONIC_ORTHO   1
 / {
+
+#if defined(PREONIC_ORTHO)
+    chosen {
+       zmk,matrix_transform = &ortho_transform;
+    };
+#endif
     combos {
         compatible = "zmk,combos";
 
