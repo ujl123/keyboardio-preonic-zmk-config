@@ -1,0 +1,91 @@
+{
+  "id": "keyboardio_preonic",
+  "name": "keyboardio_preonic",
+  "layouts": {
+    "mit_transform": {
+      "name": "ortho_transform",
+      "layout": [
+        { "label":       "ANY", "row": 0, "col":  9, "x":     10, "y":   0.00 },
+        { "label":       "FUN", "row": 0, "col": 10, "x":    11, "y":   0.00 },
+        { "label":   "encoder", "row": 0, "col": 11, "x":    12, "y":   0.00 },
+
+        { "label":     "grave", "row": 1, "col":  0, "x":     0, "y":   1.00 },
+        { "label":         "1", "row": 1, "col":  1, "x":     1, "y":   1.00 },
+        { "label":         "2", "row": 1, "col":  2, "x":     2, "y":   1.00 },
+        { "label":         "3", "row": 1, "col":  3, "x":     3, "y":   1.00 },
+        { "label":         "4", "row": 1, "col":  4, "x":     4, "y":   1.00 },
+        { "label":         "5", "row": 1, "col":  5, "x":     5, "y":   1.00 },
+        { "label":         "6", "row": 1, "col":  6, "x":     7, "y":   1.00 },
+        { "label":         "7", "row": 1, "col":  7, "x":     8, "y":   1.00 },
+        { "label":         "8", "row": 1, "col":  8, "x":     9, "y":   1.00 },
+        { "label":         "9", "row": 1, "col":  9, "x":     10, "y":   1.00 },
+        { "label":         "0", "row": 1, "col": 10, "x":    11, "y":   1.00 },
+        { "label":         "-", "row": 1, "col": 11, "x":    12, "y":   1.00 },
+
+        { "label":       "TAB", "row": 2, "col":  0, "x":     0, "y":   2.00 },
+        { "label":         "Q", "row": 2, "col":  1, "x":     1, "y":   2.00 },
+        { "label":         "W", "row": 2, "col":  2, "x":     2, "y":   2.00 },
+        { "label":         "E", "row": 2, "col":  3, "x":     3, "y":   2.00 },
+        { "label":         "R", "row": 2, "col":  4, "x":     4, "y":   2.00 },
+        { "label":         "T", "row": 2, "col":  5, "x":     5, "y":   2.00 },
+        { "label":         "Y", "row": 2, "col":  6, "x":     7, "y":   2.00 },
+        { "label":         "U", "row": 2, "col":  7, "x":     8, "y":   2.00 },
+        { "label":         "I", "row": 2, "col":  8, "x":     9, "y":   2.00 },
+        { "label":         "O", "row": 2, "col":  9, "x":     10, "y":   2.00 },
+        { "label":         "P", "row": 2, "col": 10, "x":    11, "y":   2.00 },
+        { "label":      "BSPC", "row": 2, "col": 11, "x":    12, "y":   2.00 },
+
+        { "label":       "Esc", "row": 3, "col":  0, "x":     0, "y":   3.00 },
+        { "label":         "A", "row": 3, "col":  1, "x":     1, "y":   3.00 },
+        { "label":         "S", "row": 3, "col":  2, "x":     2, "y":   3.00 },
+        { "label":         "D", "row": 3, "col":  3, "x":     3, "y":   3.00 },
+        { "label":         "F", "row": 3, "col":  4, "x":     4, "y":   3.00 },
+        { "label":         "G", "row": 3, "col":  5, "x":     5, "y":   3.00 },
+        { "label":         "H", "row": 3, "col":  6, "x":     7, "y":   3.00 },
+        { "label":         "J", "row": 3, "col":  7, "x":     8, "y":   3.00 },
+        { "label":         "K", "row": 3, "col":  8, "x":     9, "y":   3.00 },
+        { "label":         "L", "row": 3, "col":  9, "x":     10, "y":   3.00 },
+        { "label":         ";", "row": 3, "col": 10, "x":    11, "y":   3.00 },
+        { "label":         "'", "row": 3, "col": 11, "x":    12, "y":   3.00 },
+
+        { "label":    "LShift", "row": 4, "col":  0, "x":     0, "y":   4.00 },
+        { "label":         "Z", "row": 4, "col":  1, "x":     1, "y":   4.00 },
+        { "label":         "X", "row": 4, "col":  2, "x":     2, "y":   4.00 },
+        { "label":         "C", "row": 4, "col":  3, "x":     3, "y":   4.00 },
+        { "label":         "V", "row": 4, "col":  4, "x":     4, "y":   4.00 },
+        { "label":         "B", "row": 4, "col":  5, "x":     5, "y":   4.00 },
+        { "label":         "N", "row": 4, "col":  6, "x":     7, "y":   4.00 },
+        { "label":         "M", "row": 4, "col":  7, "x":     8, "y":   4.00 },
+        { "label":         ",", "row": 4, "col":  8, "x":     9, "y":   4.00 },
+        { "label":         ".", "row": 4, "col":  9, "x":     10, "y":   4.00 },
+        { "label":  "backlash", "row": 4, "col": 10, "x":    11, "y":   4.00 },
+        { "label":       "Esc", "row": 4, "col": 11, "x":    12, "y":   4.00 },
+
+        { "label":    "Hyper ", "row": 5, "col":  0, "x":     0, "y":   5.00 },
+        { "label":      "CTRL", "row": 5, "col":  1, "x":     1, "y":   5.00 },
+        { "label":       "ALT", "row": 5, "col":  2, "x":     2, "y":   5.00 },
+        { "label":       "CMD", "row": 5, "col":  3, "x":     3, "y":   5.00 },
+        { "label":     "Lower", "row": 5, "col":  4, "x":     4, "y":   5.00 },
+        { "label":     "SPACE", "row": 5, "col":  5, "x":     5, "y":   5.00 },
+        { "label":      "BSPC", "row": 5, "col":  6, "x":     7, "y":   5.00 },
+        { "label":     "RAISE", "row": 5, "col":  7, "x":     8, "y":   5.00 },
+        { "label":      "LEFT", "row": 5, "col":  8, "x":     9, "y":   5.00 },
+        { "label":      "DOWN", "row": 5, "col":  9, "x":     10, "y":   5.00 },
+        { "label":        "UP", "row": 5, "col": 10, "x":    11, "y":   5.00 },
+        { "label":     "RIGHT", "row": 5, "col": 11, "x":    12, "y":   5.00 }
+
+      ]
+    }
+  },
+  "sensors": [
+
+    {
+      "ref": "right_encoder",
+      "name": "right_encoder",
+      "identifier": "right_encoder",
+      "compatible": "alps,ec11",
+      "label": "R_ENCODER",
+      "enabled": true
+    }
+  ]
+}
