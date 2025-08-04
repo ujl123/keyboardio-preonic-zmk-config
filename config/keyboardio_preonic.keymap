@@ -144,7 +144,7 @@
 &trans   &sk LEFT_ALT    &kp HOME        &kp UP_ARROW            &kp END          &kp C_VOLUME_UP    &kp LS(PLUS)          &tapholdkp LS(N7) N7              &tapholdkp LS(N8) N8              &tapholdkp LS(N9) N9              &none       &none
 &trans   &sk LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN_ARROW          &kp RIGHT_ARROW  &kp C_PLAY_PAUSE   &kp MINUS             &tapholdkp LS(N4) NUMBER_4        &tapholdkp LS(N5) N5              &tapholdkp LS(N6) NUMBER_6        &none       &none
 &trans   &sk LCTRL       &kp PAGE_UP     &kp LS(LC(DOWN_ARROW))  &kp PAGE_DOWN    &kp C_VOLUME_DOWN  &kp DOT               &tapholdkp LS(NUMBER_1) NUMBER_1  &tapholdkp LS(NUMBER_2) NUMBER_2  &tapholdkp LS(NUMBER_3) NUMBER_3  &none       &none
-&trans   &trans          &none           &trans                  &none            &none              &tapholdkp PERIOD N0  &tapholdkp PERIOD N0              &none                             &none                             &none       &none
+&trans   &trans          &none           &trans                  &tog 1           &none              &tapholdkp PERIOD N0  &tapholdkp PERIOD N0              &none                             &none                             &none       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>;
