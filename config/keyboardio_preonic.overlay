@@ -1,6 +1,13 @@
 #include <dt-bindings/led/led.h>
 / {
-    
+    gpio_keys {
+        compatible = "gpio-keys";
+
+        rgb_enable: rgb_enable {
+            gpios = <&gpio1 5 GPIO_ACTIVE_HIGH>;
+            label = "RGB_EN";
+        };
+    };
     gpio_keys {
         compatible = "gpio-keys";
 
