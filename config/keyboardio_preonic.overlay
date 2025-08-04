@@ -1,17 +1,7 @@
 #include <dt-bindings/led/led.h>
 /
 {
-    gpio_keys
-    {
-        compatible = "gpio-keys";
 
-    rgb_enable:
-        rgb_enable
-        {
-            gpios = <&gpio1 5 GPIO_ACTIVE_HIGH>;
-            label = "RGB_EN";
-        };
-    };
     chosen
     {
         zmk, underglow = &led_strip;
@@ -25,7 +15,17 @@ right_encoder:
         steps = <80>;
         status = "okay";
     };
+    gpio_keys
+    {
+        compatible = "gpio-keys";
 
+    rgb_enable:
+        rgb_enable
+        {
+            gpios = <&gpio1 5 GPIO_ACTIVE_HIGH>;
+            label = "RGB_EN";
+        };
+    };
 sensors:
     sensors
     {
