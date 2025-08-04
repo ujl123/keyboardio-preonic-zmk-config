@@ -14,7 +14,9 @@
 #include <dt-bindings/zmk/rgb.h>
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
-
+&led_strip {
+    chain-length = <4>;
+};
 &lt {
 };
 &right_encoder {
