@@ -16,15 +16,15 @@
 
 &lt {
 };
-
+&led_strip {
+    chain-length = <4>;
 #define PREONIC_ORTHO   1
 
 / {
     #if defined(PREONIC_ORTHO)
 
     chosen { zmk,matrix_transform = &ortho_transform; zmk,underglow = &led_strip;};
-&led_strip {
-    chain-length = <4>;
+
 };
     #endif
 
