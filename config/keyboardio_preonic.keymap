@@ -16,7 +16,9 @@
 
 &lt {
 };
-
+&led_strip {
+    chain-length = <21>;
+};
 #define PREONIC_ORTHO   1
 
 / {
