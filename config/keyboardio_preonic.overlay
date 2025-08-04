@@ -1,45 +1,54 @@
 #include <dt-bindings/led/led.h>
 
 / {
-    /* Pin control setup */
-    &pinctrl {
-        spi3_default: spi3_default {
-            group1 {
-                psels = <NRF_PSEL(SPIM_MOSI, 0, 19)>; /* P0.19 */
-            };
-        };
+    /* ZMK underglow node */
+    underglow {
+        compatible = "zmk,underglow";
+        label = "Underglow";
+        led-strip = <&led_strip>;
+        led-count = <4>;          /* Number of LEDs */
+        color-mapping = <0 1 2 3>;
+    };
+};
 
-        spi3_sleep: spi3_sleep {
-            group1 {
-                psels = <NRF_PSEL(SPIM_MOSI, 0, 19)>; /* P0.19 */
-                low-power-enable;
-            };
+/* Correctly patch the existing pinctrl node */
+&pinctrl {
+    spi3_default: spi3_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 19)>; /* P0.19 */
         };
     };
 
-    /* SPI instance used to drive WS2812 */
-    &spi3 {
-        compatible = "nordic,nrf-spim";
-        status = "okay";
-
-        pinctrl-0 = <&spi3_default>;
-        pinctrl-1 = <&spi3_sleep>;
-        pinctrl-names = "default", "sleep";
-
-        led_strip: ws2812@0 {
-            compatible = "worldsemi,ws2812-spi";
-
-            /* SPI config */
-            reg = <0>; /* Required dummy value */
-            spi-max-frequency = <4000000>;
-
-            /* WS2812 LED chain */
-            chain-length = <4>; /* Change to match number of LEDs */
-            spi-one-frame = <0x70>;
-            spi-zero-frame = <0x40>;
-            color-mapping = <LED_COLOR_ID_GREEN
-                             LED_COLOR_ID_RED
-                             LED_COLOR_ID_BLUE>;
+    spi3_sleep: spi3_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 19)>; /* P0.19 */
+            low-power-enable;
         };
+    };
+};
+
+/* Configure SPI3 with WS2812 LEDs */
+&spi3 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+
+    pinctrl-0 = <&spi3_default>;
+    pinctrl-1 = <&spi3_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    led_strip: ws2812@0 {
+        compatible = "worldsemi,ws2812-spi";
+
+        /* SPI */
+        reg = <0>;
+        spi-max-frequency = <4000000>;
+
+        /* WS2812 */
+        chain-length = <4>;
+        spi-one-frame = <0x70>;
+        spi-zero-frame = <0x40>;
+        color-mapping = <LED_COLOR_ID_GREEN
+                         LED_COLOR_ID_RED
+                         LED_COLOR_ID_BLUE>;
     };
 };
