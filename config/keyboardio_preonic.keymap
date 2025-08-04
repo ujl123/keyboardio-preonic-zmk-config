@@ -16,8 +16,7 @@
 
 &lt {
 };
-&led_strip {
-    chain-length = <4>;
+
 #define PREONIC_ORTHO   1
 
 / {
@@ -25,9 +24,10 @@
 
     chosen { zmk,matrix_transform = &ortho_transform; zmk,underglow = &led_strip;};
 
-};
-    #endif
 
+    #endif
+&led_strip {
+    chain-length = <4>;};
     combos {
         compatible = "zmk,combos";
 
