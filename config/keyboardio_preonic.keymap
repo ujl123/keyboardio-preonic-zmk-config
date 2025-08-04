@@ -17,7 +17,6 @@
 
 &led_strip { chain-length = <4>; };
 
-&right_encoder { status = "okay"; };
 
 #define PREONIC_ORTHO   1
 
