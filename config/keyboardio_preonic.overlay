@@ -27,6 +27,14 @@
         triggers-per-rotation = <20>;
     };
 };
+&gpio1 {
+    ext_power: ext_power {
+        compatible = "zmk,ext-power-generic";
+        status = "okay";
+        gpios = <&gpio1 5 GPIO_ACTIVE_HIGH>; // adjust GPIO port/pin accordingly
+    };
+};
+
 &right_encoder {
     status = "okay";
 };
