@@ -2,7 +2,7 @@
 /{
 
     chosen{
-        zmk, underglow = &led_strip;
+        zmk,underglow = &led_strip;
     };
 right_encoder:
     encoder_right
