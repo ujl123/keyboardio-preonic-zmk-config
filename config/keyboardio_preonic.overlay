@@ -21,12 +21,13 @@
     };
 };
 &gpio1 {
-    ext_power_ctrl: ext_power {
+    ext_power: ext_power {
         compatible = "zmk,ext-power-generic";
         status = "okay";
-        gpios = <&gpio1 5 GPIO_ACTIVE_HIGH>; // adjust GPIO port/pin accordingly
+        control-gpios = <&gpio1 5 GPIO_ACTIVE_HIGH>; // ✅ Required property
     };
 };
+
 
 &right_encoder {
     status = "okay";
