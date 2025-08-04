@@ -165,7 +165,7 @@
 &trans  &kp LS(LG(S))  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_UP    &bt BT_DISC 0   &bt BT_SEL 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
 &none   &mkp MB5       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MCLK       &none           &none         &none          &none          &none          &rgb_ug RGB_EFF
 &trans  &mkp MB4       &kp LEFT_ARROW  &none           &kp RIGHT_ARROW  &msc SCRL_DOWN  &bt BT_CLR_ALL  &none         &none          &none          &none          &rgb_ug RGB_TOG
-&trans  &trans         &trans          &trans          &none            &none           &tog 2          &none         &none          &none          &none          &bootloader
+&trans  &trans         &trans          &trans          &none            &none           &tog 2          &none         &none          &none          &none          &sys_reset
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOLUME_DOWN>;
