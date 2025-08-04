@@ -101,7 +101,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
@@ -128,7 +128,7 @@
                                                                                                                                                    &kp C_VOL_DN            &kp C_VOLUME_UP            &kp C_PLAY_PAUSE
 &kp GRAVE             &kp N1        &kp N2         &kp N3    &kp N4     &kp N5       &kp N6                 &kp N7     &kp N8                      &kp N9                  &kp N0                     &kp HOME
 &kp TAB               &kp Q         &kp W          &kp E     &kp R      &kp T        &kp Y                  &kp U      &tapholdkp LS(I) I          &kp O                   &kp P                      &kp PAGE_UP
-&ctrlcapword LCTRL 0  &kp A         &kp S          &kp D     &kp F      &kp G        &kp H                  &kp J      &kp K                       &kp L                   &kp SEMI                   &kp PAGE_DOWN
+&ctrlcapword LCTRL 0  &kp A         &kp S          &kp D     &kp F      &kp G        &kp H                  &kp J      &kp K                       &kp L                   &tapholdkp LS(SEMI) SEMI   &kp PAGE_DOWN
 &kp LSHFT             &kp Z         &kp X          &kp C     &kp V      &kp B        &kp N                  &kp M      &tapholdkp LS(COMMA) COMMA  &tapholdkp LS(DOT) DOT  &tapholdkp LS(FSLH) SLASH  &kp END
 &kp LCTRL             &kp LEFT_GUI  &kp LG(LS(S))  &kp LALT  &kp SPACE  &lt 1 SPACE  &tapholdlayer 2 SPACE  &kp K_APP  &kp LEFT                    &kp DOWN_ARROW          &kp UP                     &kp RIGHT_ARROW
             >;
@@ -139,12 +139,12 @@
         num_arrow {
             label = "numarrow";
             bindings = <
-                                                                                                                                                                                       &kp C_PREVIOUS                    &kp C_NEXT  &trans
-&kp F12  &kp F1          &kp F2          &kp F3          &kp F4           &kp F5             &kp F6                &kp F7                            &kp F8                            &kp F9                            &kp F10     &kp F11
-&trans   &sk LEFT_ALT    &kp HOME        &kp UP_ARROW    &kp END          &kp C_VOLUME_UP    &kp LS(PLUS)          &tapholdkp LS(N7) N7              &tapholdkp LS(N8) N8              &tapholdkp LS(N9) N9              &none       &none
-&trans   &sk LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C_PLAY_PAUSE   &kp MINUS             &tapholdkp LS(N4) NUMBER_4        &tapholdkp LS(N5) N5              &tapholdkp LS(N6) NUMBER_6        &none       &none
-&trans   &sk LCTRL       &kp PAGE_UP     &none           &kp PAGE_DOWN    &kp C_VOLUME_DOWN  &kp DOT               &tapholdkp LS(NUMBER_1) NUMBER_1  &tapholdkp LS(NUMBER_2) NUMBER_2  &tapholdkp LS(NUMBER_3) NUMBER_3  &none       &none
-&trans   &trans          &none           &trans          &none            &none              &tapholdkp PERIOD N0  &tapholdkp PERIOD N0              &none                             &none                             &none       &none
+                                                                                                                                                                                               &kp C_PREVIOUS                    &kp C_NEXT  &trans
+&kp F12  &kp F1          &kp F2          &kp F3                  &kp F4           &kp F5             &kp F6                &kp F7                            &kp F8                            &kp F9                            &kp F10     &kp F11
+&trans   &sk LEFT_ALT    &kp HOME        &kp UP_ARROW            &kp END          &kp C_VOLUME_UP    &kp LS(PLUS)          &tapholdkp LS(N7) N7              &tapholdkp LS(N8) N8              &tapholdkp LS(N9) N9              &none       &none
+&trans   &sk LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN_ARROW          &kp RIGHT_ARROW  &kp C_PLAY_PAUSE   &kp MINUS             &tapholdkp LS(N4) NUMBER_4        &tapholdkp LS(N5) N5              &tapholdkp LS(N6) NUMBER_6        &none       &none
+&trans   &sk LCTRL       &kp PAGE_UP     &kp LS(LC(DOWN_ARROW))  &kp PAGE_DOWN    &kp C_VOLUME_DOWN  &kp DOT               &tapholdkp LS(NUMBER_1) NUMBER_1  &tapholdkp LS(NUMBER_2) NUMBER_2  &tapholdkp LS(NUMBER_3) NUMBER_3  &none       &none
+&trans   &trans          &none           &trans                  &none            &none              &tapholdkp PERIOD N0  &tapholdkp PERIOD N0              &none                             &none                             &none       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>;
@@ -152,12 +152,12 @@
 
         mouse_bt {
             bindings = <
-                                                                                                                                       &bt BT_PRV     &bt BT_NXT     &bt BT_CLR
-&none   &none          &none           &none             &none            &none           &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
-&trans  &kp LS(LG(S))  &mkp LCLK       &mmv MOVE_UP      &mkp RCLK        &msc SCRL_UP    &bt BT_DISC 0   &bt BT_SEL 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
-&none   &mkp MB5       &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT  &mkp MCLK       &none           &none         &none          &none          &none          &none
-&trans  &mkp MB4       &kp LEFT_ARROW  &kp LS(LC(DOWN))  &kp RIGHT_ARROW  &msc SCRL_DOWN  &bt BT_CLR_ALL  &none         &none          &none          &none          &none
-&trans  &trans         &trans          &trans            &none            &none           &to 0           &none         &none          &none          &none          &bootloader
+                                                                                                                                     &bt BT_PRV     &bt BT_NXT     &bt BT_CLR
+&none   &none          &none           &none           &none            &none           &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
+&trans  &kp LS(LG(S))  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_UP    &bt BT_DISC 0   &bt BT_SEL 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
+&none   &mkp MB5       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MCLK       &none           &none         &none          &none          &none          &none
+&trans  &mkp MB4       &kp LEFT_ARROW  &none           &kp RIGHT_ARROW  &msc SCRL_DOWN  &bt BT_CLR_ALL  &none         &none          &none          &none          &none
+&trans  &trans         &trans          &trans          &none            &none           &to 0           &none         &none          &none          &none          &bootloader
             >;
         };
     };
