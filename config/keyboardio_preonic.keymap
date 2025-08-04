@@ -22,8 +22,7 @@
 / {
     #if defined(PREONIC_ORTHO)
 
-    chosen { zmk,matrix_transform = &ortho_transform; zmk,underglow = &led_strip;};
-
+    chosen { zmk,matrix_transform = &ortho_transform; };
 
     #endif
 
@@ -163,5 +162,3 @@
         };
     };
 };
-&led_strip {
-    chain-length = <4>;};
