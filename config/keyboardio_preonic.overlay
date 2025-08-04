@@ -11,6 +11,9 @@
         sensors = <&right_encoder>;
         triggers-per-rotation = <20>;
     };
+&right_encoder {
+    status = "okay";
+};
 &pinctrl {
     spi3_default: spi3_default {
         group1 {
