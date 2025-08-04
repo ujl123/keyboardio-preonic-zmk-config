@@ -22,7 +22,11 @@
 / {
     #if defined(PREONIC_ORTHO)
 
-    chosen { zmk,matrix_transform = &ortho_transform; };
+    chosen { 
+zmk,matrix_transform = &ortho_transform;
+ zmk,underglow = &led_strip;
+
+};
 
     #endif
 
