@@ -26,8 +26,7 @@
 
 
     #endif
-&led_strip {
-    chain-length = <4>;};
+
     combos {
         compatible = "zmk,combos";
 
@@ -164,3 +163,5 @@
         };
     };
 };
+&led_strip {
+    chain-length = <4>;};
