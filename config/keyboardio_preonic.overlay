@@ -4,12 +4,12 @@
         zmk,underglow = &led_strip;
     };
 
-
-    left_encoder: encoder_left {
+    //All 3 slots on the top allows for encoders, so they are defined here, and the right encoder is used by default.
+     right_encoder: encoder_right {
         compatible = "alps,ec11";
-        //flipped the pins because they are reversed (untested)
-        a-gpios = <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        //flipped the pins because they are reversed
+        a-gpios = <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
         status = "disabled";
     };
@@ -22,22 +22,22 @@
         status = "disabled";
     };
 
-    right_encoder: encoder_right {
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = < &right_encoder &middle_encoder &left_encoder  >; // note the order of the sensors, it goes right to left
+        triggers-per-rotation = <20>;
+    };
+    left_encoder: encoder_left {
         compatible = "alps,ec11";
-        //flipped the pins because they are reversed
-        a-gpios = <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        //flipped the pins because they are reversed (untested)
+        a-gpios = <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
         status = "disabled";
     };
-
-    sensors: sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = < &left_encoder &middle_encoder &right_encoder>;
-        //sensors = <&right_encoder>;
-        triggers-per-rotation = <20>;
-    };
 };
+
+//Set led's power pin to high P1.05 aka gpio1 5
 &gpio1 {
     ext_power_gpio: ext_power_gpio {
         compatible = "zmk,ext-power-generic";
@@ -46,24 +46,21 @@
     };
 };
 
-
-
-
+//boiler plate for RGB underglow, RGB underglow data pin is P0.24
 &pinctrl {
     spi3_default: spi3_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 24)>;
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 24)>; //P0.24
         };
     };
 
     spi3_sleep: spi3_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 24)>;
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 24)>; //P0.24
             low-power-enable;
         };
     };
 };
-
 &spi3 {
     compatible = "nordic,nrf-spim";
     status = "okay";

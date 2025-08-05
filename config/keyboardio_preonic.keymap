@@ -137,7 +137,7 @@
 &kp LCTRL             &kp LGUI  &kp LG(LA(SPACE))  &kp LALT  &kp SPACE  &lt 1 SPACE  &tapholdlayer 2 SPACE  &kp K_APP  &kp LEFT                    &kp DOWN_ARROW          &kp UP                     &kp RIGHT_ARROW
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         num_arrow {
@@ -151,7 +151,7 @@
 &trans   &trans          &none           &trans                  &tog 1           &none              &tapholdkp PERIOD N0  &tapholdkp PERIOD N0              &none                             &none                             &none       &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_NEXT C_PREV &inc_dec_kp C_NEXT C_PREV &inc_dec_kp C_NEXT C_PREV>;
+            sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>;
         };
 
         mouse_bt {
@@ -164,7 +164,7 @@
 &trans  &trans         &trans          &trans          &none            &none           &tog 2          &none         &none          &none          &none              &sys_reset
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOLUME_DOWN &inc_dec_kp C_VOL_UP C_VOLUME_DOWN &inc_dec_kp C_VOL_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOLUME_DOWN>;
         };
     };
 };
