@@ -3,7 +3,7 @@
     chosen {
         zmk,underglow = &led_strip;
     };
-/*
+
 
     left_encoder: encoder_left {
         compatible = "alps,ec11";
@@ -21,7 +21,7 @@
         steps = <80>;
         status = "disabled";
     };
-*/
+
     right_encoder: encoder_right {
         compatible = "alps,ec11";
         //flipped the pins because they are reversed
@@ -33,8 +33,8 @@
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
-        //sensors = <&left_encoder &middle_encoder &right_encoder>;
-        sensors = <&right_encoder>;
+        sensors = <&left_encoder &middle_encoder &right_encoder>;
+        //sensors = <&right_encoder>;
         triggers-per-rotation = <20>;
     };
 };
