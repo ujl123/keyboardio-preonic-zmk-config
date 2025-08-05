@@ -11,9 +11,9 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    # - name: keyboardio-preonic-zmk-module
-#   remote: keyboardio
-#   revision: main
+#    - name: keyboardio-preonic-zmk-module
+#      remote: keyboardio
+#      revision: main
     - name: keyboardio-preonic-zmk-module
       remote: replicaJunction
       revision: zmk-studio
