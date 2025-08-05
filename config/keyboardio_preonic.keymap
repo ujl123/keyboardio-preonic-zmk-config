@@ -21,11 +21,9 @@
 #define PREONIC_ORTHO   1
 
 / {
-    #if defined(PREONIC_ORTHO)
-
     chosen {
-        zmk,matrix_transform = &ortho_transform;
-        zmk,underglow = &led_strip;
+        // Valid choices: [ &mit_layout, &ortho_layout ]
+        zmk,physical-layout = &mit_layout;
     };
 
     #endif
