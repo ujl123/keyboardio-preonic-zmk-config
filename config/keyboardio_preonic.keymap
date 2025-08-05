@@ -26,7 +26,7 @@
         zmk,physical-layout = &mit_layout;
     };
 
-    #endif
+
 
     combos {
         compatible = "zmk,combos";
