@@ -26,7 +26,7 @@
         // call rgb off on layer 2, and turn it on when leaving layer 2
         nav_num_feedback {
             layers = <2>;
-            bindings = <&rgb_ugRGB_OFF &rgb_ugRGB_ON>;
+            bindings = <&rgb_ug RGB_OFF &rgb_ug RGB_ON>;
         };
 
 
