@@ -20,6 +20,19 @@
         zmk,physical-layout = &ortho_layout;
     };
 
+    layer_listeners {
+        compatible = "zmk,layer-listeners";
+
+        // call rgb off on layer 2, and turn it on when leaving layer 2
+        nav_num_feedback {
+            layers = <2>;
+            bindings = <&rgb_ugRGB_OFF &rgb_ugRGB_ON>;
+        };
+
+
+    };
+
+
     combos {
         compatible = "zmk,combos";
 
