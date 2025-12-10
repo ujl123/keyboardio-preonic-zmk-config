@@ -24,19 +24,19 @@
         compatible = "zmk,layer-listeners";
         // disable led when entering qwerty layer
         qwerty_feedback {
-            layers = <2>;
+            layers = <0>;
             bindings = <&rgb_ug RGB_OFF &none>;
         };
         // call green underglow when entering layer 1
 
-        nav_num_feedback {
-            layers = <2>;
+        arrow_num_feedback {
+            layers = <1>;
             bindings = <&rgb_ug RGB_COLOR_HSB(120, 61, 50) &none>;
         };
 
         // call red underglow when entering layer 2
 
-        nav_num_feedback {
+        mouse_bt_feedback {
             layers = <2>;
             bindings = <&rgb_ug RGB_COLOR_HSB(0, 89, 28) &none>;
         };
