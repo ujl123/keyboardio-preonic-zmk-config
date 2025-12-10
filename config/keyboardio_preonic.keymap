@@ -25,20 +25,20 @@
         // disable led when entering qwerty layer
         qwerty_feedback {
             layers = <0>;
-            bindings = <&rgb_ug RGB_OFF &none>;
+            bindings = <&rgb_ug RGB_OFF &rgb_ug RGB_ON>;
         };
         // call green underglow when entering layer 1
 
         arrow_num_feedback {
             layers = <1>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(120, 61, 50) &none>;
+            bindings = <&rgb_ug RGB_COLOR_HSB(120, 100, 100) &none>;
         };
 
         // call red underglow when entering layer 2
 
         mouse_bt_feedback {
             layers = <2>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(0, 89, 28) &none>;
+            bindings = <&rgb_ug RGB_COLOR_HSB(360, 100, 100) &none>;
         };
 
     };
