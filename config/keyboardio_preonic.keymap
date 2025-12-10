@@ -24,7 +24,7 @@
         compatible = "zmk,layer-listeners";
         // disable led when entering qwerty layer
         qwerty_feedback {
-            layers = <0>;
+            layers = <2>;
             bindings = <&rgb_ug RGB_OFF &rgb_ug RGB_ON>;
         };
 
