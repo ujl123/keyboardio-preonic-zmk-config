@@ -19,7 +19,7 @@
 
         zmk,physical-layout = &ortho_layout;
     };
-
+/*
     layer_listeners {
         compatible = "zmk,layer-listeners";
         // disable led when entering qwerty layer
@@ -34,6 +34,7 @@
         
 
     };
+    */
 
     combos {
         compatible = "zmk,combos";
